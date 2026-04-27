@@ -93,16 +93,12 @@
     width: 100%;
   }
 
-  .mood-grid {
-    max-width: 700px;
-  }
-
   .mood-cell {
     aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(0.5rem, 1.3vw, 0.72rem);
+    font-size: clamp(0.42rem, 1.2vw, 0.58rem);
     text-align: center;
     cursor: pointer;
     border-radius: 3px;
@@ -110,7 +106,7 @@
     border: 1px solid #333;
     color: #ccc;
     transition: all 0.12s;
-    padding: 3px;
+    padding: 2px;
     line-height: 1.2;
     user-select: none;
   }
@@ -204,10 +200,6 @@
     <p>Before we begin, please select the word that best describes your current mood.</p>
     <div class="mood-label">Select one word</div>
     <div class="mood-grid" id="pre-mood-grid"></div>
-    <div class="mood-axes">
-      <span>← negative</span>
-      <span>positive →</span>
-    </div>
     <div class="mood-selected-label" id="pre-mood-label">Nothing selected yet</div>
     <button class="btn" id="pre-mood-btn" onclick="goToStory()" disabled>Continue</button>
   </div>
@@ -227,10 +219,6 @@
     <h1>How do you feel now?</h1>
     <p>Select the word that best describes your mood after reading the text.</p>
     <div class="mood-grid" id="post-mood-grid"></div>
-    <div class="mood-axes">
-      <span>← negative</span>
-      <span>positive →</span>
-    </div>
     <div class="mood-selected-label" id="post-mood-label">Nothing selected yet</div>
     <button class="btn" id="post-mood-btn" onclick="finish()" disabled>Submit</button>
   </div>
